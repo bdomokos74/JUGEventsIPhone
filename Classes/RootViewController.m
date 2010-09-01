@@ -21,6 +21,23 @@
 		//theTableView = nil;
 		self.dataSource = theDataSource;
 		self.service = theService;
+		self.view = [[[NSBundle bundleForClass:[self class]] loadNibNamed:@"RootViewController" owner:self options:NULL] lastObject];
+
+		self.title = @"JUGEvents";
+		
+		UITableView *tableView =  (UITableView*)[self.view viewWithTag:102];
+		
+		// set the autoresizing mask so that the table will always fill the view
+		tableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);
+		
+		// set the cell separator to a single straight line.
+		tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+		
+		tableView.delegate = self;
+		tableView.dataSource = self.dataSource;
+		
+		tableView.sectionIndexMinimumDisplayRowCount=10;
+		
 		//		self.title = [dataSource name];
 		//		self.tabBarItem.image = [dataSource tabBarImage];
 		
@@ -38,25 +55,13 @@
 }
 
 - (void)loadView {
-	
+	NSLog(@"loadView called");
 	// create a new table using the full application frame
 	// we'll ask the datasource which type of table to use (plain or grouped)
-	UITableView *tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] 
-														  style:UITableViewStylePlain];
-	
-	// set the autoresizing mask so that the table will always fill the view
-	tableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);
-	
-	// set the cell separator to a single straight line.
-	tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-	
-	tableView.delegate = self;
-	tableView.dataSource = self.dataSource;
-	
-	tableView.sectionIndexMinimumDisplayRowCount=10;
-	
-	self.view = tableView;
-	[tableView release];
+
+		
+	//self.view = tableView;
+	//[tableView release];
 	
 }
 

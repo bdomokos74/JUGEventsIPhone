@@ -19,7 +19,7 @@
 		NSLog(@"eventcontroller init: %@", [self.eventData objectForKey: @"description"]);
 		UIWebView *webView = (UIWebView*)[self.view viewWithTag:101];
 		//webView.text = [self.eventData objectForKey: @"description"];
-		[webView loadHTMLString: [self.eventData objectForKey: @"description"] baseURL: [NSURL URLWithString:@"http://www.hitchhiker.com/message"]];
+		[webView loadHTMLString: [self.eventData objectForKey: @"description"] baseURL: [NSURL URLWithString:@"http://www.jugevents.org"]];
     }
     return self;
 }

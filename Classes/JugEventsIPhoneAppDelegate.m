@@ -27,6 +27,7 @@
 	id<UITableViewDataSource> dataSource = [[EventDataSource alloc ]initWithService: service];
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:
 								   [[RootViewController alloc] initWithDataSource: dataSource withService: service]];
+	
 	[service release];
 	[dataSource release];
 	

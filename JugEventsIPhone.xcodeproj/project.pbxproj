@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		2905329B122F0109009B543F /* applicationLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2905329A122F0109009B543F /* applicationLogo.jpg */; };
+		2905329E122F03A9009B543F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2905329D122F03A9009B543F /* RootViewController.xib */; };
 		29635F1E122D89B700363982 /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = 29635F1D122D89B700363982 /* example.json */; };
 		297CB69C122C4F1C0071CC06 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CB693122C4F1C0071CC06 /* NSObject+SBJSON.m */; };
 		297CB69D122C4F1C0071CC06 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CB695122C4F1C0071CC06 /* NSString+SBJSON.m */; };
@@ -35,6 +37,8 @@
 		28A0AAE50D9B0CCF005BE974 /* JugEventsIPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JugEventsIPhone_Prefix.pch; sourceTree = "<group>"; };
 		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		2905329A122F0109009B543F /* applicationLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = applicationLogo.jpg; sourceTree = "<group>"; };
+		2905329D122F03A9009B543F /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29635F1D122D89B700363982 /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.json; sourceTree = "<group>"; };
 		297CB691122C4F1C0071CC06 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		297CB692122C4F1C0071CC06 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			children = (
 				297CB6A1122C4F8F0071CC06 /* JSON */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				2905329D122F03A9009B543F /* RootViewController.xib */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* JugEventsIPhoneAppDelegate.h */,
 				1D3623250D0F684500981E51 /* JugEventsIPhoneAppDelegate.m */,
@@ -141,6 +146,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2905329A122F0109009B543F /* applicationLogo.jpg */,
 				29635F1D122D89B700363982 /* example.json */,
 				8D1107310486CEB800E47090 /* JugEventsIPhone-Info.plist */,
 			);
@@ -208,6 +214,8 @@
 			files = (
 				29635F1E122D89B700363982 /* example.json in Resources */,
 				29D0A729122DB84900FA7851 /* EventViewController.xib in Resources */,
+				2905329B122F0109009B543F /* applicationLogo.jpg in Resources */,
+				2905329E122F03A9009B543F /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
