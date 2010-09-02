@@ -7,27 +7,14 @@
 //
 
 #import "EventService.h"
-#import "JSON.h"
 
 @implementation EventService
 
--(id) initWithData
+-(id) initWithEvents: (NSArray*) theEvents
 {
 	if( self = [super init])
 	{
-		//		NSFileManager *fm = [NSFileManager defaultManager];
-		NSBundle * bundle = [NSBundle bundleForClass:[self class]];
-		NSString *bundlePath = [bundle bundlePath];
-		NSLog(@"bundlePath=%@", bundlePath);
-		NSString *jsonPath = [bundle pathForResource:@"example" ofType: @"json"];
-		NSLog(@"jsonPath=%@", jsonPath);
-		NSString *json = [NSString stringWithContentsOfFile: jsonPath encoding: NSUTF8StringEncoding error: NULL];
-		//NSLog(@"%@", json);
-		
-		//id response = [self objectWithJsonString: json];
-		events = [[json JSONValue] retain];
-		
-		//NSLog(@"arr1=%@", [dict objectForKey: @"title"]);
+		events = [theEvents retain];
 	}
 	return self;
 }
@@ -35,6 +22,27 @@
 -(NSString*)getTitleAtIndex: (NSUInteger)index
 {
 	return [[events objectAtIndex: index ] objectForKey: @"title"];
+}
+
+-(NSString*)getEventTimeAtIndex: (NSUInteger)index
+{
+	NSString *startTime = [[events objectAtIndex: index ] objectForKey: @"start"];
+	NSString *endTime = [[events objectAtIndex: index ] objectForKey: @"end"];
+	NSRange r; 
+	r.location = 0; 
+	r.length = 10;
+	NSString *datePart = [startTime substringWithRange: r];
+	NSLog(@"datePart=%@", datePart);
+	NSString *secondPart = endTime;
+	if ([endTime hasPrefix:datePart]) {
+		NSRange timeRange;
+		timeRange.location = 11;
+		timeRange.length = 8;
+		secondPart = [endTime substringWithRange:timeRange];
+	}
+	NSLog(@"secondPart=%@", secondPart);
+	NSString *eventTime = [startTime stringByAppendingFormat:@" - %@", secondPart];
+	return eventTime;
 }
 
 -(NSDictionary*)getDataAtIndex:(NSUInteger)index

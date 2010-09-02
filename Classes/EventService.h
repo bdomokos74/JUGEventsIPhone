@@ -13,8 +13,9 @@
 	NSArray *events;
 }
 
--(id)initWithData;
+-(id)initWithEvents: (NSArray*) theEvents;
 -(NSString*)getTitleAtIndex:(NSUInteger)index;
+-(NSString*)getEventTimeAtIndex:(NSUInteger)index;
 -(NSDictionary*)getDataAtIndex:(NSUInteger)index;
 -(NSUInteger)count;
 

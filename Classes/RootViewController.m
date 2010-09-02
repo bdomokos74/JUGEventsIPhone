@@ -23,7 +23,7 @@
 		self.service = theService;
 		self.view = [[[NSBundle bundleForClass:[self class]] loadNibNamed:@"RootViewController" owner:self options:NULL] lastObject];
 
-		self.title = @"JUGEvents";
+		self.title = @"Current Events";
 		
 		UITableView *tableView =  (UITableView*)[self.view viewWithTag:102];
 		
