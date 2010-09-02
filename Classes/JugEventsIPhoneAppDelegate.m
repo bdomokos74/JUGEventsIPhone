@@ -32,7 +32,7 @@
 	NSLog(@"jsonPath=%@", jsonPath);
 	NSString *json = [NSString stringWithContentsOfFile: jsonPath encoding: NSUTF8StringEncoding error: NULL];
 
-	EventService *service = [[EventService alloc] initWithData: [[json JSONValue] retain]];
+	EventService *service = [[EventService alloc] initWithEvents: [[json JSONValue] retain]];
 	
 	id<UITableViewDataSource> dataSource = [[EventDataSource alloc ]initWithService: service];
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:
