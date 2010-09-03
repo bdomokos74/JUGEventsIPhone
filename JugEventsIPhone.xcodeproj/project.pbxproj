@@ -24,8 +24,37 @@
 		29D0A6EA122DA78100FA7851 /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A6E9122DA78100FA7851 /* EventService.m */; };
 		29D0A728122DB84900FA7851 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A726122DB84900FA7851 /* EventViewController.m */; };
 		29D0A729122DB84900FA7851 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D0A727122DB84900FA7851 /* EventViewController.xib */; };
+		29D8E1D01231760C00123F5F /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = 29635F1D122D89B700363982 /* example.json */; };
+		29D8E1D11231760C00123F5F /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D0A727122DB84900FA7851 /* EventViewController.xib */; };
+		29D8E1D31231760C00123F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		29D8E1D41231760C00123F5F /* JugEventsIPhoneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* JugEventsIPhoneAppDelegate.m */; };
+		29D8E1D51231760C00123F5F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		29D8E1D61231760C00123F5F /* EventDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E0C71B122344F0009F535D /* EventDataSource.m */; };
+		29D8E1D71231760C00123F5F /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CB693122C4F1C0071CC06 /* NSObject+SBJSON.m */; };
+		29D8E1D81231760C00123F5F /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CB695122C4F1C0071CC06 /* NSString+SBJSON.m */; };
+		29D8E1D91231760C00123F5F /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CB697122C4F1C0071CC06 /* SBJsonBase.m */; };
+		29D8E1DA1231760C00123F5F /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CB699122C4F1C0071CC06 /* SBJsonParser.m */; };
+		29D8E1DB1231760C00123F5F /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CB69B122C4F1C0071CC06 /* SBJsonWriter.m */; };
+		29D8E1DC1231760C00123F5F /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A6E9122DA78100FA7851 /* EventService.m */; };
+		29D8E1DD1231760C00123F5F /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A726122DB84900FA7851 /* EventViewController.m */; };
+		29D8E1DF1231760C00123F5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		29D8E1E01231760C00123F5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		29D8E1E11231760C00123F5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		29D8E2031231777200123F5F /* JugEventsIphoneTests.octest in Resources */ = {isa = PBXBuildFile; fileRef = 29D8E1F4123176FA00123F5F /* JugEventsIphoneTests.octest */; };
 		29E0C71C122344F0009F535D /* EventDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E0C71B122344F0009F535D /* EventDataSource.m */; };
+		29E2F0DC12319CD80015BAAA /* EventServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D8E2081231785900123F5F /* EventServiceTest.m */; };
+		29E2F0E812319D860015BAAA /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A6E9122DA78100FA7851 /* EventService.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29D8E1F91231772D00123F5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29D8E1F3123176FA00123F5F;
+			remoteInfo = JugEventsIphoneTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +86,12 @@
 		29D0A725122DB84900FA7851 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		29D0A726122DB84900FA7851 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		29D0A727122DB84900FA7851 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		29D8E1E51231760C00123F5F /* JugEventsIPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JugEventsIPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D8E1E71231760C00123F5F /* JugEventsIPhone-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JugEventsIPhone-Info copy.plist"; sourceTree = "<group>"; };
+		29D8E1F4123176FA00123F5F /* JugEventsIphoneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JugEventsIphoneTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D8E1F5123176FA00123F5F /* JugEventsIphoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JugEventsIphoneTests-Info.plist"; sourceTree = "<group>"; };
+		29D8E2071231785900123F5F /* EventServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventServiceTest.h; sourceTree = "<group>"; };
+		29D8E2081231785900123F5F /* EventServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventServiceTest.m; sourceTree = "<group>"; };
 		29E0C71A122344F0009F535D /* EventDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDataSource.h; sourceTree = "<group>"; };
 		29E0C71B122344F0009F535D /* EventDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDataSource.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* JugEventsIPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JugEventsIPhone-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -70,6 +105,23 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D8E1DE1231760C00123F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D8E1DF1231760C00123F5F /* Foundation.framework in Frameworks */,
+				29D8E1E01231760C00123F5F /* UIKit.framework in Frameworks */,
+				29D8E1E11231760C00123F5F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D8E1F1123176FA00123F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* JugEventsIPhone.app */,
+				29D8E1E51231760C00123F5F /* JugEventsIPhone.app */,
+				29D8E1F4123176FA00123F5F /* JugEventsIphoneTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,11 +179,13 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				29D8E206123177C100123F5F /* Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				29D8E1F5123176FA00123F5F /* JugEventsIphoneTests-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -149,6 +205,7 @@
 				2905329A122F0109009B543F /* applicationLogo.jpg */,
 				29635F1D122D89B700363982 /* example.json */,
 				8D1107310486CEB800E47090 /* JugEventsIPhone-Info.plist */,
+				29D8E1E71231760C00123F5F /* JugEventsIPhone-Info copy.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -161,6 +218,15 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29D8E206123177C100123F5F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				29D8E2071231785900123F5F /* EventServiceTest.h */,
+				29D8E2081231785900123F5F /* EventServiceTest.m */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +249,42 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* JugEventsIPhone.app */;
 			productType = "com.apple.product-type.application";
 		};
+		29D8E1CE1231760C00123F5F /* JugEventsIPhoneTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29D8E1E21231760C00123F5F /* Build configuration list for PBXNativeTarget "JugEventsIPhoneTesting" */;
+			buildPhases = (
+				29D8E1CF1231760C00123F5F /* Resources */,
+				29D8E1D21231760C00123F5F /* Sources */,
+				29D8E1DE1231760C00123F5F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29D8E1FA1231772D00123F5F /* PBXTargetDependency */,
+			);
+			name = JugEventsIPhoneTesting;
+			productName = JugEventsIPhone;
+			productReference = 29D8E1E51231760C00123F5F /* JugEventsIPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29D8E1F3123176FA00123F5F /* JugEventsIphoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29D8E1F8123176FA00123F5F /* Build configuration list for PBXNativeTarget "JugEventsIphoneTests" */;
+			buildPhases = (
+				29D8E1EF123176FA00123F5F /* Resources */,
+				29D8E1F0123176FA00123F5F /* Sources */,
+				29D8E1F1123176FA00123F5F /* Frameworks */,
+				29D8E1F2123176FA00123F5F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JugEventsIphoneTests;
+			productName = JugEventsIphoneTests;
+			productReference = 29D8E1F4123176FA00123F5F /* JugEventsIphoneTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +305,8 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* JugEventsIPhone */,
+				29D8E1CE1231760C00123F5F /* JugEventsIPhoneTesting */,
+				29D8E1F3123176FA00123F5F /* JugEventsIphoneTests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,7 +323,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29D8E1CF1231760C00123F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D8E2031231777200123F5F /* JugEventsIphoneTests.octest in Resources */,
+				29D8E1D01231760C00123F5F /* example.json in Resources */,
+				29D8E1D11231760C00123F5F /* EventViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D8E1EF123176FA00123F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29D8E1F2123176FA00123F5F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -240,7 +377,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29D8E1D21231760C00123F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D8E1D31231760C00123F5F /* main.m in Sources */,
+				29D8E1D41231760C00123F5F /* JugEventsIPhoneAppDelegate.m in Sources */,
+				29D8E1D51231760C00123F5F /* RootViewController.m in Sources */,
+				29D8E1D61231760C00123F5F /* EventDataSource.m in Sources */,
+				29D8E1D71231760C00123F5F /* NSObject+SBJSON.m in Sources */,
+				29D8E1D81231760C00123F5F /* NSString+SBJSON.m in Sources */,
+				29D8E1D91231760C00123F5F /* SBJsonBase.m in Sources */,
+				29D8E1DA1231760C00123F5F /* SBJsonParser.m in Sources */,
+				29D8E1DB1231760C00123F5F /* SBJsonWriter.m in Sources */,
+				29D8E1DC1231760C00123F5F /* EventService.m in Sources */,
+				29D8E1DD1231760C00123F5F /* EventViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D8E1F0123176FA00123F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E2F0E812319D860015BAAA /* EventService.m in Sources */,
+				29E2F0DC12319CD80015BAAA /* EventServiceTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29D8E1FA1231772D00123F5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29D8E1F3123176FA00123F5F /* JugEventsIphoneTests */;
+			targetProxy = 29D8E1F91231772D00123F5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -267,6 +439,91 @@
 				INFOPLIST_FILE = "JugEventsIPhone-Info.plist";
 				PRODUCT_NAME = JugEventsIPhone;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29D8E1E31231760C00123F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JugEventsIPhone_Prefix.pch;
+				INFOPLIST_FILE = "JugEventsIPhone-Info copy.plist";
+				PRODUCT_NAME = JugEventsIPhone;
+			};
+			name = Debug;
+		};
+		29D8E1E41231760C00123F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JugEventsIPhone_Prefix.pch;
+				INFOPLIST_FILE = "JugEventsIPhone-Info copy.plist";
+				PRODUCT_NAME = JugEventsIPhone;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29D8E1F6123176FA00123F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "JugEventsIphoneTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = JugEventsIphoneTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		29D8E1F7123176FA00123F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "JugEventsIphoneTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = JugEventsIphoneTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -306,6 +563,24 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29D8E1E21231760C00123F5F /* Build configuration list for PBXNativeTarget "JugEventsIPhoneTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29D8E1E31231760C00123F5F /* Debug */,
+				29D8E1E41231760C00123F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29D8E1F8123176FA00123F5F /* Build configuration list for PBXNativeTarget "JugEventsIphoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29D8E1F6123176FA00123F5F /* Debug */,
+				29D8E1F7123176FA00123F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
