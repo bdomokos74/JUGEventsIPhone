@@ -33,7 +33,6 @@
 	r.location = 0; 
 	r.length = 10;
 	NSString *datePart = [startTime substringWithRange: r];
-	NSLog(@"datePart=%@", datePart);
 	NSString *secondPart = endTime;
 	if ([endTime hasPrefix:datePart]) {
 		NSRange timeRange;
@@ -41,7 +40,6 @@
 		timeRange.length = 8;
 		secondPart = [endTime substringWithRange:timeRange];
 	}
-	NSLog(@"secondPart=%@", secondPart);
 	NSString *eventTime = [startTime stringByAppendingFormat:@" - %@", secondPart];
 	return eventTime;
 }
@@ -53,7 +51,6 @@
 
 - (NSUInteger)count
 {
-	NSLog(@"self.events count=%d", [self.events count]);
 	return [self.events count];
 }
 

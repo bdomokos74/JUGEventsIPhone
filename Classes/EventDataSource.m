@@ -21,12 +21,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [[[UITableViewCell alloc]  initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier: @"noreuse" ] autorelease];
-	NSLog(@"indexPath: len=%d, [0]=%d, [1]=%d", [indexPath length], [indexPath indexAtPosition:0], [indexPath indexAtPosition:1]);
+	UITableViewCell *cell = [[[UITableViewCell alloc]  
+							  initWithStyle: UITableViewCellStyleSubtitle 
+							  reuseIdentifier: @"noreuse" ] autorelease];
+	
 	cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
 	
 	cell.textLabel.text =  [service getTitleAtIndex: [indexPath indexAtPosition:1]];
-	NSLog(@"eventtime=%@", [service getEventTimeAtIndex: [indexPath indexAtPosition:1]]);
+
     cell.detailTextLabel.text = [service getEventTimeAtIndex: [indexPath indexAtPosition:1]];
 	
 	return cell;

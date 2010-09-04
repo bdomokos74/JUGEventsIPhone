@@ -36,13 +36,16 @@
 	EventService *service = [[EventService alloc] init];
 	service.events = [json JSONValue];
 	
-	EventDownloader *downloader = [[EventDownloader alloc] initWithUrl: @"http://www.jugevents.org/jugevents/event/json.html?continent=&country=&jugName=&pastEvents=false&order=asc" withService: service];
-	
 	id<UITableViewDataSource> dataSource = [[EventDataSource alloc ] initWithService: service];
-	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:
-								   [[RootViewController alloc] initWithDataSource: dataSource 
-																	  withService: service
-																   withDownloader: downloader]];
+
+	RootViewController *rootViewController = [[RootViewController alloc] 
+											  initWithDataSource: dataSource 
+											  withService: service];
+	
+	EventDownloader *downloader = [[EventDownloader alloc] initWithUrl: @"http://www.jugevents.org/jugevents/event/json.html?continent=&country=&jugName=&pastEvents=false&order=asc" withService: service];
+	downloader.observer = rootViewController;
+
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: rootViewController];
 	
 	[service release];
 	[dataSource release];
@@ -50,6 +53,8 @@
 	[localWindow addSubview:nav.view];
     [localWindow makeKeyAndVisible];
 
+	[downloader startDowload];
+	
     return YES;
 }
 

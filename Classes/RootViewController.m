@@ -14,13 +14,11 @@
 
 @synthesize dataSource;
 @synthesize service;
-@synthesize downloader;
 
-- (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService:(EventService*)theService withDownloader: (EventDownloader*) theDownloader
+- (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService:(EventService*)theService
 {
 	if ([self init]) {
 		//theTableView = nil;
-		self.downloader = theDownloader;
 		self.service = theService;
 		self.dataSource = theDataSource;
 		self.view = [[[NSBundle bundleForClass:[self class]] loadNibNamed:@"RootViewController" owner:self options:NULL] lastObject];
@@ -67,11 +65,6 @@
 	
 //}
 
-- (void)viewDidAppear:(BOOL)animated{
-	[super viewDidAppear:animated];
-	NSLog(@"viewDidAppear called---------------------------%@", self.downloader);
-	[self.downloader startDowload];
-}
 
 #pragma mark -
 #pragma mark Table view data source
@@ -81,9 +74,14 @@
     return 1;
 }
 
+- (void) invalidateData {
+	NSLog(@"reloading event list in root view...");
+	[(UITableView*)[self.view viewWithTag:102] reloadData];
+}
+
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.service count];
+	return [self.service count];
 }
 
 #pragma mark -

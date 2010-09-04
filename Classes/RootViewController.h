@@ -10,14 +10,13 @@
 #import "EventService.h"
 #import "EventDownloader.h"
 
-@interface RootViewController : UITableViewController  <UITableViewDelegate> {
+@interface RootViewController : UITableViewController  <UITableViewDelegate, DownloaderDelegate> {
 	id<UITableViewDataSource> dataSource;
 }
 
 @property (nonatomic,retain) id<UITableViewDataSource> dataSource;
 @property (nonatomic,retain) EventService *service;
-@property (nonatomic,retain) EventDownloader *downloader;
 
 - (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService: (EventService*)theService withDownloader: (EventDownloader*) downloader;
-
+- (void)invalidateData ;
 @end

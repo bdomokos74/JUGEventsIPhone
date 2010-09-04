@@ -12,7 +12,7 @@
 
 }
 
-@property (nonatomic,retain) NSArray *events;
+@property (retain) NSArray *events;
 
 - (id)init;
 - (void)setEvents: (NSArray*) theEvents;

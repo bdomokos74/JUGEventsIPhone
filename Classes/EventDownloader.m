@@ -16,6 +16,7 @@
 @synthesize response;
 @synthesize data;
 @synthesize urlConnection;
+@synthesize observer;
 
 - (id) initWithUrl: (NSString*)theUrl withService: (EventService *)theService {
 	if (self = [super init]) {
@@ -66,22 +67,13 @@
 
 - (void)cleanup {
 	service = nil;
-	urlString = nil;
 	response = nil;
 	urlConnection = nil;
 	data = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)aResponse {
-	NSLog(@"didReceiveResponse ");
-	if ([aResponse expectedContentLength] < 0)
-	{
-		[self handleFailure: [NSString stringWithFormat: @"Invalid URL [%@]", self.urlString]];
-		[connection cancel];
-		[self cleanup];
-		return;
-	}
-	
+	NSLog(@"didReceiveResponse , explength=%d", [aResponse expectedContentLength]);	
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)theData {
@@ -97,9 +89,16 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	NSLog(@"didFinishLoading ");
+	NSLog(@"didFinishLoading, notifying observer: %@, respondsto: %d", self.observer, [self.observer respondsToSelector: @selector(invalidateData:)]);
 	NSString *jsonString = [[NSString alloc] initWithData: self.data encoding: NSUTF8StringEncoding];
 	service.events = [jsonString JSONValue];
+	
+	if (self.observer && [self.observer respondsToSelector: @selector(invalidateData)]) {
+		[self.observer performSelector:@selector(invalidateData)];
+	} else {
+		NSLog(@"observer can't be notified");
+	}
+
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	[self.urlConnection unscheduleFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 	[self cleanup];

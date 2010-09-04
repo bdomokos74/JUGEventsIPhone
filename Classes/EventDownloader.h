@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "EventService.h"
 
-@interface EventDownloader : NSObject {
+@protocol DownloaderDelegate <NSObject>
+	- (void) invalidateData;
+@end
 
+@interface EventDownloader : NSObject {
 }
 
 @property (nonatomic,retain) EventService* service;
@@ -18,6 +21,7 @@
 @property (nonatomic,retain) NSURLConnection *urlConnection;
 @property (nonatomic,retain) NSMutableData *data;
 @property (nonatomic,retain) NSURLResponse *response;
+@property (nonatomic,retain) id<DownloaderDelegate> observer;
 
 - (id) initWithUrl: (NSString*)theUrl withService: (EventService *)theService;
 - (void) startDowload;
