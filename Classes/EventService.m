@@ -10,24 +10,25 @@
 
 @implementation EventService
 
--(id) initWithEvents: (NSArray*) theEvents
+@synthesize events;
+
+- (id) init
 {
 	if( self = [super init])
 	{
-		events = [theEvents retain];
 	}
 	return self;
 }
 
--(NSString*)getTitleAtIndex: (NSUInteger)index
+- (NSString*)getTitleAtIndex: (NSUInteger)index
 {
-	return [[events objectAtIndex: index ] objectForKey: @"title"];
+	return [[self.events objectAtIndex: index ] objectForKey: @"title"];
 }
 
--(NSString*)getEventTimeAtIndex: (NSUInteger)index
+- (NSString*)getEventTimeAtIndex: (NSUInteger)index
 {
-	NSString *startTime = [[events objectAtIndex: index ] objectForKey: @"start"];
-	NSString *endTime = [[events objectAtIndex: index ] objectForKey: @"end"];
+	NSString *startTime = [[self.events objectAtIndex: index ] objectForKey: @"start"];
+	NSString *endTime = [[self.events objectAtIndex: index ] objectForKey: @"end"];
 	NSRange r; 
 	r.location = 0; 
 	r.length = 10;
@@ -45,14 +46,15 @@
 	return eventTime;
 }
 
--(NSDictionary*)getDataAtIndex:(NSUInteger)index
+- (NSDictionary*)getDataAtIndex:(NSUInteger)index
 {
-	return [events objectAtIndex: index ];
+	return [self.events objectAtIndex: index ];
 }
 
--(NSUInteger)count
+- (NSUInteger)count
 {
-	return [events count];
+	NSLog(@"self.events count=%d", [self.events count]);
+	return [self.events count];
 }
 
 @end

@@ -44,6 +44,7 @@
 		29E0C71C122344F0009F535D /* EventDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E0C71B122344F0009F535D /* EventDataSource.m */; };
 		29E2F0DC12319CD80015BAAA /* EventServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D8E2081231785900123F5F /* EventServiceTest.m */; };
 		29E2F0E812319D860015BAAA /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A6E9122DA78100FA7851 /* EventService.m */; };
+		29E2F15512322F020015BAAA /* EventDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E2F15412322F020015BAAA /* EventDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		29D8E2081231785900123F5F /* EventServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventServiceTest.m; sourceTree = "<group>"; };
 		29E0C71A122344F0009F535D /* EventDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDataSource.h; sourceTree = "<group>"; };
 		29E0C71B122344F0009F535D /* EventDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDataSource.m; sourceTree = "<group>"; };
+		29E2F15312322F020015BAAA /* EventDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDownloader.h; sourceTree = "<group>"; };
+		29E2F15412322F020015BAAA /* EventDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDownloader.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* JugEventsIPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JugEventsIPhone-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +147,8 @@
 				29D0A725122DB84900FA7851 /* EventViewController.h */,
 				29D0A726122DB84900FA7851 /* EventViewController.m */,
 				29D0A727122DB84900FA7851 /* EventViewController.xib */,
+				29E2F15312322F020015BAAA /* EventDownloader.h */,
+				29E2F15412322F020015BAAA /* EventDownloader.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				297CB6A0122C4F1C0071CC06 /* SBJsonWriter.m in Sources */,
 				29D0A6EA122DA78100FA7851 /* EventService.m in Sources */,
 				29D0A728122DB84900FA7851 /* EventViewController.m in Sources */,
+				29E2F15512322F020015BAAA /* EventDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

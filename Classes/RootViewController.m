@@ -14,13 +14,15 @@
 
 @synthesize dataSource;
 @synthesize service;
+@synthesize downloader;
 
-- (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService:(EventService*)theService
+- (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService:(EventService*)theService withDownloader: (EventDownloader*) theDownloader
 {
 	if ([self init]) {
 		//theTableView = nil;
-		self.dataSource = theDataSource;
+		self.downloader = theDownloader;
 		self.service = theService;
+		self.dataSource = theDataSource;
 		self.view = [[[NSBundle bundleForClass:[self class]] loadNibNamed:@"RootViewController" owner:self options:NULL] lastObject];
 
 		self.title = @"Current Events";
@@ -54,8 +56,8 @@
 	return self;
 }
 
-- (void)loadView {
-	NSLog(@"loadView called");
+//- (void)loadView {
+//	NSLog(@"loadView called");
 	// create a new table using the full application frame
 	// we'll ask the datasource which type of table to use (plain or grouped)
 
@@ -63,6 +65,12 @@
 	//self.view = tableView;
 	//[tableView release];
 	
+//}
+
+- (void)viewDidAppear:(BOOL)animated{
+	[super viewDidAppear:animated];
+	NSLog(@"viewDidAppear called---------------------------%@", self.downloader);
+	[self.downloader startDowload];
 }
 
 #pragma mark -
@@ -75,11 +83,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
-}
-
-- (UITableViewCellAccessoryType)tableView:(UITableView *)aTableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellAccessoryDisclosureIndicator;
+    return [self.service count];
 }
 
 #pragma mark -

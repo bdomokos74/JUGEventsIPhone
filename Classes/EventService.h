@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface EventService : NSObject {
-	NSArray *events;
+
 }
 
--(id)initWithEvents: (NSArray*) theEvents;
--(NSString*)getTitleAtIndex:(NSUInteger)index;
--(NSString*)getEventTimeAtIndex:(NSUInteger)index;
--(NSDictionary*)getDataAtIndex:(NSUInteger)index;
--(NSUInteger)count;
+@property (nonatomic,retain) NSArray *events;
+
+- (id)init;
+- (void)setEvents: (NSArray*) theEvents;
+- (NSString*)getTitleAtIndex:(NSUInteger)index;
+- (NSString*)getEventTimeAtIndex:(NSUInteger)index;
+- (NSDictionary*)getDataAtIndex:(NSUInteger)index;
+- (NSUInteger)count;
 
 @end

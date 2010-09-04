@@ -9,6 +9,7 @@
 #import "JugEventsIPhoneAppDelegate.h"
 #import "RootViewController.h"
 #import "EventDataSource.h"
+#import "EventDownloader.h"
 #import "JSON.h"
 
 @implementation JugEventsIPhoneAppDelegate
@@ -32,11 +33,16 @@
 	NSLog(@"jsonPath=%@", jsonPath);
 	NSString *json = [NSString stringWithContentsOfFile: jsonPath encoding: NSUTF8StringEncoding error: NULL];
 
-	EventService *service = [[EventService alloc] initWithEvents: [[json JSONValue] retain]];
+	EventService *service = [[EventService alloc] init];
+	service.events = [json JSONValue];
 	
-	id<UITableViewDataSource> dataSource = [[EventDataSource alloc ]initWithService: service];
+	EventDownloader *downloader = [[EventDownloader alloc] initWithUrl: @"http://www.jugevents.org/jugevents/event/json.html?continent=&country=&jugName=&pastEvents=false&order=asc" withService: service];
+	
+	id<UITableViewDataSource> dataSource = [[EventDataSource alloc ] initWithService: service];
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:
-								   [[RootViewController alloc] initWithDataSource: dataSource withService: service]];
+								   [[RootViewController alloc] initWithDataSource: dataSource 
+																	  withService: service
+																   withDownloader: downloader]];
 	
 	[service release];
 	[dataSource release];
