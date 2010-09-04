@@ -16,17 +16,24 @@
 {
 	if( self = [super init])
 	{
-	}
+	}	
 	return self;
 }
 
 - (NSString*)getTitleAtIndex: (NSUInteger)index
 {
+	if (self.events==nil) {
+		return nil
+		;
+	}
 	return [[self.events objectAtIndex: index ] objectForKey: @"title"];
 }
 
 - (NSString*)getEventTimeAtIndex: (NSUInteger)index
 {
+	if (self.events==nil) {
+		return nil;
+	}
 	NSString *startTime = [[self.events objectAtIndex: index ] objectForKey: @"start"];
 	NSString *endTime = [[self.events objectAtIndex: index ] objectForKey: @"end"];
 	NSRange r; 
@@ -46,11 +53,17 @@
 
 - (NSDictionary*)getDataAtIndex:(NSUInteger)index
 {
+	if (self.events==nil) {
+		return nil;
+	}
 	return [self.events objectAtIndex: index ];
 }
 
 - (NSUInteger)count
 {
+	if (self.events==nil) {
+		return 0;
+	}
 	return [self.events count];
 }
 

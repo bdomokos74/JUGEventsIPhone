@@ -36,6 +36,7 @@
 		tableView.delegate = self;
 		tableView.dataSource = self.dataSource;
 		
+		tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 		tableView.sectionIndexMinimumDisplayRowCount=10;
 		
 		//		self.title = [dataSource name];
@@ -54,34 +55,9 @@
 	return self;
 }
 
-//- (void)loadView {
-//	NSLog(@"loadView called");
-	// create a new table using the full application frame
-	// we'll ask the datasource which type of table to use (plain or grouped)
-
-		
-	//self.view = tableView;
-	//[tableView release];
-	
-//}
-
-
-#pragma mark -
-#pragma mark Table view data source
-
-// Customize the number of sections in the table view.
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (void) invalidateData {
 	NSLog(@"reloading event list in root view...");
 	[(UITableView*)[self.view viewWithTag:102] reloadData];
-}
-
-// Customize the number of rows in the table view.
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [self.service count];
 }
 
 #pragma mark -

@@ -14,7 +14,8 @@
 	NSArray *values = [NSArray arrayWithObjects: @"2010-08-30 18:30:00", @"2010-08-30 20:30:00", nil];
 	NSDictionary *dict = [NSDictionary dictionaryWithObjects: values forKeys: keys];
 	NSArray *events = [NSArray arrayWithObjects: dict, nil];
-	EventService *service = [[EventService alloc] initWithEvents: events];
+	EventService *service = [[EventService alloc] init];
+	service.events = events;
 	
 	NSString *actual = [service getEventTimeAtIndex:0];
 	NSString *expected = @"2010-08-30 18:30:00 - 20:30:00";
@@ -28,7 +29,8 @@
 	NSArray *values = [NSArray arrayWithObjects: @"2010-08-30 18:30:00", @"2010-08-31 20:30:00", nil];
 	NSDictionary *dict = [NSDictionary dictionaryWithObjects: values forKeys: keys];
 	NSArray *events = [NSArray arrayWithObjects: dict, nil];
-	EventService *service = [[EventService alloc] initWithEvents: events];
+	EventService *service = [[EventService alloc] init];
+	service.events = events;
 	
 	NSString *actual = [service getEventTimeAtIndex:0];
 	NSString *expected = @"2010-08-30 18:30:00 - 2010-08-31 20:30:00";

@@ -8,6 +8,7 @@
 
 #import "EventDownloader.h"
 #import "JSON.h"
+#import "JugEvents.h"
 
 @implementation EventDownloader
 
@@ -92,6 +93,13 @@
 	NSLog(@"didFinishLoading, notifying observer: %@, respondsto: %d", self.observer, [self.observer respondsToSelector: @selector(invalidateData:)]);
 	NSString *jsonString = [[NSString alloc] initWithData: self.data encoding: NSUTF8StringEncoding];
 	service.events = [jsonString JSONValue];
+	
+	NSString *path = [NSHomeDirectory() stringByAppendingPathComponent: JUGEVENTS_FILE_PATH];
+	if ([service.events writeToFile:path atomically:YES]) {
+		NSLog(@"File was written successfully");
+	} else {
+		NSLog(@"Failed to write file");
+	}
 	
 	if (self.observer && [self.observer respondsToSelector: @selector(invalidateData)]) {
 		[self.observer performSelector:@selector(invalidateData)];

@@ -17,6 +17,6 @@
 @property (nonatomic,retain) id<UITableViewDataSource> dataSource;
 @property (nonatomic,retain) EventService *service;
 
-- (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService: (EventService*)theService withDownloader: (EventDownloader*) downloader;
+- (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService: (EventService*)theService;
 - (void)invalidateData ;
 @end

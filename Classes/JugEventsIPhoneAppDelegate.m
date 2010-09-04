@@ -11,6 +11,7 @@
 #import "EventDataSource.h"
 #import "EventDownloader.h"
 #import "JSON.h"
+#import "JugEvents.h"
 
 @implementation JugEventsIPhoneAppDelegate
 
@@ -26,15 +27,20 @@
 	localWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
 	// test with json from filesystem
+	/*
 	NSBundle * bundle = [NSBundle bundleForClass:[self class]];
 	NSString *bundlePath = [bundle bundlePath];
 	NSLog(@"bundlePath=%@", bundlePath);
 	NSString *jsonPath = [bundle pathForResource:@"example" ofType: @"json"];
 	NSLog(@"jsonPath=%@", jsonPath);
 	NSString *json = [NSString stringWithContentsOfFile: jsonPath encoding: NSUTF8StringEncoding error: NULL];
-
-	EventService *service = [[EventService alloc] init];
+	 
 	service.events = [json JSONValue];
+     */
+	
+	EventService *service = [[EventService alloc] init];
+	NSString *path = [NSHomeDirectory() stringByAppendingPathComponent: JUGEVENTS_FILE_PATH];
+	service.events = [NSArray arrayWithContentsOfFile:path];
 	
 	id<UITableViewDataSource> dataSource = [[EventDataSource alloc ] initWithService: service];
 
@@ -42,7 +48,7 @@
 											  initWithDataSource: dataSource 
 											  withService: service];
 	
-	EventDownloader *downloader = [[EventDownloader alloc] initWithUrl: @"http://www.jugevents.org/jugevents/event/json.html?continent=&country=&jugName=&pastEvents=false&order=asc" withService: service];
+	EventDownloader *downloader = [[EventDownloader alloc] initWithUrl: JUGEVENTS_JSON_URL withService: service];
 	downloader.observer = rootViewController;
 
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: rootViewController];
