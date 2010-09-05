@@ -14,6 +14,9 @@
 
 @synthesize dataSource;
 @synthesize service;
+@synthesize lastUpdated;
+
+BOOL firstTime = TRUE;
 
 - (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService:(EventService*)theService
 {
@@ -55,9 +58,21 @@
 	return self;
 }
 
-- (void) invalidateData {
+- (void) viewDidAppear:(BOOL)animated {
+	if (firstTime) {
+		firstTime = FALSE;
+		UILabel *lastUpdatedLabel = (UILabel *)[self.view viewWithTag:104];
+		lastUpdatedLabel.text = self.lastUpdated;
+		NSLog(@"rootview setting label: %@", self.lastUpdated);
+	}
+	[super viewDidAppear:animated];
+}
+
+- (void) invalidateData: (NSString*) lastUpdate {
 	NSLog(@"reloading event list in root view...");
 	[(UITableView*)[self.view viewWithTag:102] reloadData];
+	UILabel *lastUpdateLabel = (UILabel*)[self.view viewWithTag:104];
+	lastUpdateLabel.text = [NSString stringWithFormat:@"Data downloaded: %@", lastUpdate];
 }
 
 #pragma mark -

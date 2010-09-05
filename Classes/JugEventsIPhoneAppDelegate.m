@@ -47,7 +47,7 @@
 	RootViewController *rootViewController = [[RootViewController alloc] 
 											  initWithDataSource: dataSource 
 											  withService: service];
-	
+
 	EventDownloader *downloader = [[EventDownloader alloc] initWithUrl: JUGEVENTS_JSON_URL withService: service];
 	downloader.observer = rootViewController;
 
@@ -59,6 +59,11 @@
 	[localWindow addSubview:nav.view];
     [localWindow makeKeyAndVisible];
 
+	NSString *lastUpdatedPath = [NSHomeDirectory() stringByAppendingPathComponent: JUGEVENTS_UPDATED_FILE_PATH];
+	NSString *lastUpdated = [NSString stringWithContentsOfFile:lastUpdatedPath encoding: NSUTF8StringEncoding error:nil];
+	NSLog(@"loaded prev timestamp: %@", lastUpdated);
+	rootViewController.lastUpdated = lastUpdated;
+	
 	[downloader startDowload];
 	
     return YES;

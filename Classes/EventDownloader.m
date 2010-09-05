@@ -33,7 +33,7 @@
 }
 
 - (void) startDowload {
-	NSLog(@"starting downloader !!!!!!!!!!!!!!!!!!");
+	NSLog(@"starting downloader");
 	NSURL *url = [NSURL URLWithString: self.urlString];
 	if (!url)
 	{
@@ -62,7 +62,7 @@
 	// Create the new data object
 	self.data = [NSMutableData data];
 	self.response = nil;
-	NSLog(@"scheduling downloader !!!!!!!!!!!!!!!!!!");
+	NSLog(@"scheduling downloader");
 	[self.urlConnection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
@@ -89,6 +89,20 @@
 	[self cleanup];
 }
 
+- (NSString*)writeCurrDate {
+	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init]
+								  autorelease]; formatter.dateFormat = @"YYYY/MM/dd HH:mm:ss"; 
+	NSString *timestamp = [formatter stringFromDate:[NSDate date]]; 
+	
+	NSString *path = [NSHomeDirectory() stringByAppendingPathComponent: JUGEVENTS_UPDATED_FILE_PATH];
+	if ([timestamp writeToFile:path atomically: TRUE encoding: NSUTF8StringEncoding error: NULL]) {
+		NSLog(@"Written timestamp: %@", timestamp);
+	} else {
+		NSLog(@"Failed writing timestamp: %@", timestamp);
+	}
+	return timestamp;
+}
+
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	NSLog(@"didFinishLoading, notifying observer: %@, respondsto: %d", self.observer, [self.observer respondsToSelector: @selector(invalidateData:)]);
 	NSString *jsonString = [[NSString alloc] initWithData: self.data encoding: NSUTF8StringEncoding];
@@ -101,8 +115,8 @@
 		NSLog(@"Failed to write file");
 	}
 	
-	if (self.observer && [self.observer respondsToSelector: @selector(invalidateData)]) {
-		[self.observer performSelector:@selector(invalidateData)];
+	if (self.observer && [self.observer respondsToSelector: @selector(invalidateData:)]) {
+		[self.observer performSelector:@selector(invalidateData:) withObject: [self writeCurrDate]];
 	} else {
 		NSLog(@"observer can't be notified");
 	}
@@ -111,5 +125,7 @@
 	[self.urlConnection unscheduleFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 	[self cleanup];
 }
+
+
 
 @end

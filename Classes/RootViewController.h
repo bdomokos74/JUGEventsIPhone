@@ -16,7 +16,8 @@
 
 @property (nonatomic,retain) id<UITableViewDataSource> dataSource;
 @property (nonatomic,retain) EventService *service;
+@property (nonatomic,retain) NSString *lastUpdated;
 
 - (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService: (EventService*)theService;
-- (void)invalidateData ;
+- (void)invalidateData: (NSString*)date;
 @end

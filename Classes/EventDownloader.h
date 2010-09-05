@@ -10,7 +10,7 @@
 #import "EventService.h"
 
 @protocol DownloaderDelegate <NSObject>
-	- (void) invalidateData;
+- (void) invalidateData: (NSString*) lastUpdated;
 @end
 
 @interface EventDownloader : NSObject {
