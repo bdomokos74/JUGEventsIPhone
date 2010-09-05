@@ -43,7 +43,7 @@
 	
 	cell.textLabel.text =  [service getTitleAtIndex: [indexPath indexAtPosition:1]];
 
-    cell.detailTextLabel.text = [service getEventTimeAtIndex: [indexPath indexAtPosition:1]];
+    cell.detailTextLabel.text = [service getEventLabelAtIndex: [indexPath indexAtPosition:1]];
 	
 	return cell;
 }

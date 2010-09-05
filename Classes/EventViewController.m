@@ -7,7 +7,7 @@
 //
 
 #import "EventViewController.h"
-
+#import "EventHelper.h"
 
 @implementation EventViewController
 @synthesize eventData;
@@ -16,10 +16,16 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withEventData:(NSDictionary*)theData {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.eventData = theData;
-		NSLog(@"eventcontroller init: %@", [self.eventData objectForKey: @"description"]);
+		
 		UIWebView *webView = (UIWebView*)[self.view viewWithTag:101];
-		//webView.text = [self.eventData objectForKey: @"description"];
 		[webView loadHTMLString: [self.eventData objectForKey: @"description"] baseURL: [NSURL URLWithString:@"http://www.jugevents.org"]];
+		
+		UILabel *label = (UILabel*)[self.view viewWithTag:102];
+		
+		label.text =  [[self.eventData objectForKey: @"jugName"]
+					   stringByAppendingFormat:@"\n%@",
+					   [EventHelper getEventTimeWithStart:[self.eventData objectForKey:@"start"]
+												  withEnd: [self.eventData objectForKey:@"end"]]];
     }
     return self;
 }
@@ -58,7 +64,7 @@
 
 - (void)dealloc {
     [super dealloc];
-	[self.eventData release];
+	self.eventData = nil;
 }
 
 

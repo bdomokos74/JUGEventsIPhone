@@ -18,6 +18,7 @@
 - (void)setEvents: (NSArray*) theEvents;
 - (NSString*)getTitleAtIndex:(NSUInteger)index;
 - (NSString*)getEventTimeAtIndex:(NSUInteger)index;
+- (NSString*)getEventLabelAtIndex:(NSUInteger)index;
 - (NSDictionary*)getDataAtIndex:(NSUInteger)index;
 - (NSUInteger)count;
 

@@ -24,6 +24,10 @@
 		29D0A6EA122DA78100FA7851 /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A6E9122DA78100FA7851 /* EventService.m */; };
 		29D0A728122DB84900FA7851 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A726122DB84900FA7851 /* EventViewController.m */; };
 		29D0A729122DB84900FA7851 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D0A727122DB84900FA7851 /* EventViewController.xib */; };
+		29D617DC1234509300A3F33D /* EventHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D617DB1234509300A3F33D /* EventHelper.m */; };
+		29D617E31234537300A3F33D /* EventServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D617E21234537300A3F33D /* EventServiceTest.m */; };
+		29D617EE1234552400A3F33D /* EventHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D617DB1234509300A3F33D /* EventHelper.m */; };
+		29D618101234558700A3F33D /* EventHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6180F1234558700A3F33D /* EventHelperTest.m */; };
 		29D8E1D01231760C00123F5F /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = 29635F1D122D89B700363982 /* example.json */; };
 		29D8E1D11231760C00123F5F /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D0A727122DB84900FA7851 /* EventViewController.xib */; };
 		29D8E1D31231760C00123F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -42,7 +46,6 @@
 		29D8E1E11231760C00123F5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		29D8E2031231777200123F5F /* JugEventsIphoneTests.octest in Resources */ = {isa = PBXBuildFile; fileRef = 29D8E1F4123176FA00123F5F /* JugEventsIphoneTests.octest */; };
 		29E0C71C122344F0009F535D /* EventDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E0C71B122344F0009F535D /* EventDataSource.m */; };
-		29E2F0DC12319CD80015BAAA /* EventServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D8E2081231785900123F5F /* EventServiceTest.m */; };
 		29E2F0E812319D860015BAAA /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0A6E9122DA78100FA7851 /* EventService.m */; };
 		29E2F15512322F020015BAAA /* EventDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E2F15412322F020015BAAA /* EventDownloader.m */; };
 /* End PBXBuildFile section */
@@ -88,11 +91,15 @@
 		29D0A725122DB84900FA7851 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		29D0A726122DB84900FA7851 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		29D0A727122DB84900FA7851 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		29D617DA1234509300A3F33D /* EventHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventHelper.h; sourceTree = "<group>"; };
+		29D617DB1234509300A3F33D /* EventHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventHelper.m; sourceTree = "<group>"; };
+		29D617DD1234530F00A3F33D /* EventServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventServiceTest.h; path = Tests/EventServiceTest.h; sourceTree = "<group>"; };
+		29D617E21234537300A3F33D /* EventServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventServiceTest.m; path = Tests/EventServiceTest.m; sourceTree = "<group>"; };
+		29D6180E1234558700A3F33D /* EventHelperTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventHelperTest.h; path = Tests/EventHelperTest.h; sourceTree = "<group>"; };
+		29D6180F1234558700A3F33D /* EventHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventHelperTest.m; path = Tests/EventHelperTest.m; sourceTree = "<group>"; };
 		29D8E1E51231760C00123F5F /* JugEventsIPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JugEventsIPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D8E1F4123176FA00123F5F /* JugEventsIphoneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JugEventsIphoneTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D8E1F5123176FA00123F5F /* JugEventsIphoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JugEventsIphoneTests-Info.plist"; sourceTree = "<group>"; };
-		29D8E2071231785900123F5F /* EventServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventServiceTest.h; sourceTree = "<group>"; };
-		29D8E2081231785900123F5F /* EventServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventServiceTest.m; sourceTree = "<group>"; };
 		29E0C71A122344F0009F535D /* EventDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDataSource.h; sourceTree = "<group>"; };
 		29E0C71B122344F0009F535D /* EventDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDataSource.m; sourceTree = "<group>"; };
 		29E2F15312322F020015BAAA /* EventDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDownloader.h; sourceTree = "<group>"; };
@@ -150,6 +157,8 @@
 				29D0A727122DB84900FA7851 /* EventViewController.xib */,
 				29E2F15312322F020015BAAA /* EventDownloader.h */,
 				29E2F15412322F020015BAAA /* EventDownloader.m */,
+				29D617DA1234509300A3F33D /* EventHelper.h */,
+				29D617DB1234509300A3F33D /* EventHelper.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -228,8 +237,10 @@
 		29D8E206123177C100123F5F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				29D8E2071231785900123F5F /* EventServiceTest.h */,
-				29D8E2081231785900123F5F /* EventServiceTest.m */,
+				29D6180E1234558700A3F33D /* EventHelperTest.h */,
+				29D6180F1234558700A3F33D /* EventHelperTest.m */,
+				29D617DD1234530F00A3F33D /* EventServiceTest.h */,
+				29D617E21234537300A3F33D /* EventServiceTest.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -380,6 +391,7 @@
 				29D0A6EA122DA78100FA7851 /* EventService.m in Sources */,
 				29D0A728122DB84900FA7851 /* EventViewController.m in Sources */,
 				29E2F15512322F020015BAAA /* EventDownloader.m in Sources */,
+				29D617DC1234509300A3F33D /* EventHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,8 +417,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D617EE1234552400A3F33D /* EventHelper.m in Sources */,
 				29E2F0E812319D860015BAAA /* EventService.m in Sources */,
-				29E2F0DC12319CD80015BAAA /* EventServiceTest.m in Sources */,
+				29D617E31234537300A3F33D /* EventServiceTest.m in Sources */,
+				29D618101234558700A3F33D /* EventHelperTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

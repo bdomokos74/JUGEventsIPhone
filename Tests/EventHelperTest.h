@@ -10,6 +10,6 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
 
-@interface EventServiceTest : SenTestCase {
+@interface EventHelperTest : SenTestCase {
 }
 @end

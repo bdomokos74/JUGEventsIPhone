@@ -7,6 +7,7 @@
 //
 
 #import "EventService.h"
+#import "EventHelper.h"
 
 @implementation EventService
 
@@ -29,6 +30,17 @@
 	return [[self.events objectAtIndex: index ] objectForKey: @"title"];
 }
 
+- (NSString*)getEventLabelAtIndex: (NSUInteger)index {
+	NSString *startTime = [[self.events objectAtIndex: index ] objectForKey: @"start"];
+	NSRange r; 
+	r.location = 0; 
+	r.length = 10;
+	NSString *datePart = [startTime substringWithRange: r];
+	NSString *jugName = [[self.events objectAtIndex: index ] objectForKey: @"jugName"];
+	NSString *eventLabel = [jugName stringByAppendingFormat:@" - %@", datePart];
+	return eventLabel;
+}
+
 - (NSString*)getEventTimeAtIndex: (NSUInteger)index
 {
 	if (self.events==nil) {
@@ -36,19 +48,7 @@
 	}
 	NSString *startTime = [[self.events objectAtIndex: index ] objectForKey: @"start"];
 	NSString *endTime = [[self.events objectAtIndex: index ] objectForKey: @"end"];
-	NSRange r; 
-	r.location = 0; 
-	r.length = 10;
-	NSString *datePart = [startTime substringWithRange: r];
-	NSString *secondPart = endTime;
-	if ([endTime hasPrefix:datePart]) {
-		NSRange timeRange;
-		timeRange.location = 11;
-		timeRange.length = 8;
-		secondPart = [endTime substringWithRange:timeRange];
-	}
-	NSString *eventTime = [startTime stringByAppendingFormat:@" - %@", secondPart];
-	return eventTime;
+	return [EventHelper getEventTimeWithStart: startTime withEnd: endTime];
 }
 
 - (NSDictionary*)getDataAtIndex:(NSUInteger)index
