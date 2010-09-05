@@ -14,7 +14,6 @@
 
 @property (retain) NSArray *events;
 
-- (id)init;
 - (void)setEvents: (NSArray*) theEvents;
 - (NSString*)getTitleAtIndex:(NSUInteger)index;
 - (NSString*)getEventTimeAtIndex:(NSUInteger)index;

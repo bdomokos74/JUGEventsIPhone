@@ -10,11 +10,13 @@
 
 @implementation EventDataSource
 
--(id) initWithService:(EventService*)myService
+@synthesize service;
+
+-(id) initWithService:(EventService*)theService
 {
 	if( self = [super init])
 	{
-		service = [myService retain];
+		self.service = theService;
 	}
 	return self;
 }
@@ -28,7 +30,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	NSLog(@"numrowsinsection: sec=%d", section);
 	if (section==0) {
-		return [service count];
+		return [self.service count];
 	}
 	return 0;
 }
@@ -41,11 +43,15 @@
 	
 	cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
 	
-	cell.textLabel.text =  [service getTitleAtIndex: [indexPath indexAtPosition:1]];
+	cell.textLabel.text =  [self.service getTitleAtIndex: [indexPath indexAtPosition:1]];
 
-    cell.detailTextLabel.text = [service getEventLabelAtIndex: [indexPath indexAtPosition:1]];
+    cell.detailTextLabel.text = [self.service getEventLabelAtIndex: [indexPath indexAtPosition:1]];
 	
 	return cell;
 }
 
+- (void) dealloc {
+	self.service = nil;
+	[super dealloc];
+}
 @end

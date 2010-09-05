@@ -94,6 +94,9 @@ BOOL firstTime = TRUE;
 }
 
 - (void)dealloc {
+	dataSource = nil;
+	lastUpdated = nil;
+	service = nil;
     [super dealloc];
 }
 

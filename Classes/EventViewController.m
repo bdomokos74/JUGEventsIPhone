@@ -63,8 +63,8 @@
 
 
 - (void)dealloc {
-    [super dealloc];
 	self.eventData = nil;
+    [super dealloc];
 }
 
 

@@ -17,6 +17,7 @@
 
 @synthesize window;
 @synthesize navigationController;
+@synthesize downloader;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -48,13 +49,15 @@
 											  initWithDataSource: dataSource 
 											  withService: service];
 
-	EventDownloader *downloader = [[EventDownloader alloc] initWithUrl: JUGEVENTS_JSON_URL withService: service];
-	downloader.observer = rootViewController;
+	self.downloader = [[EventDownloader alloc] initWithUrl: JUGEVENTS_JSON_URL withService: service];
+	self.downloader.observer = rootViewController;
 
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: rootViewController];
 	
 	[service release];
 	[dataSource release];
+	[self.downloader release];
+	[rootViewController release];
 	
 	[localWindow addSubview:nav.view];
     [localWindow makeKeyAndVisible];
@@ -70,6 +73,7 @@
 }
 
 - (void)dealloc {
+	self.downloader = nil;
 	[navigationController release];
 	[window release];
 	[super dealloc];

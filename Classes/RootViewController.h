@@ -11,7 +11,6 @@
 #import "EventDownloader.h"
 
 @interface RootViewController : UITableViewController  <UITableViewDelegate, DownloaderDelegate> {
-	id<UITableViewDataSource> dataSource;
 }
 
 @property (nonatomic,retain) id<UITableViewDataSource> dataSource;
@@ -20,4 +19,5 @@
 
 - (id)initWithDataSource:(id<UITableViewDataSource>)theDataSource withService: (EventService*)theService;
 - (void)invalidateData: (NSString*)date;
+
 @end

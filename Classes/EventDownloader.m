@@ -27,6 +27,14 @@
 	return self;
 }
 
+- (void)cleanup {
+	service = nil;
+	response = nil;
+	urlConnection = nil;
+	data = nil;
+	observer = nil;
+}
+
 - (void) handleFailure: (NSString*) errorMessage {
 	NSLog(@"%@", errorMessage);
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:FALSE];
@@ -64,13 +72,6 @@
 	self.response = nil;
 	NSLog(@"scheduling downloader");
 	[self.urlConnection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-}
-
-- (void)cleanup {
-	service = nil;
-	response = nil;
-	urlConnection = nil;
-	data = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)aResponse {
@@ -126,6 +127,10 @@
 	[self cleanup];
 }
 
-
+- (void) dealloc {
+	[self cleanup];
+	self.urlString = nil;
+	[super dealloc];
+}
 
 @end

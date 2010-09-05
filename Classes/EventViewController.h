@@ -10,7 +10,6 @@
 
 
 @interface EventViewController : UIViewController {
-
 }
 
 @property (nonatomic,retain) NSDictionary *eventData;

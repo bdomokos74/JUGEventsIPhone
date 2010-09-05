@@ -13,14 +13,6 @@
 
 @synthesize events;
 
-- (id) init
-{
-	if( self = [super init])
-	{
-	}	
-	return self;
-}
-
 - (NSString*)getTitleAtIndex: (NSUInteger)index
 {
 	if (self.events==nil) {

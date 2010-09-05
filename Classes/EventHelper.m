@@ -8,7 +8,6 @@
 
 #import "EventHelper.h"
 
-
 @implementation EventHelper
 
 + (NSString*) getEventTimeWithStart: (NSString*)startTime withEnd: (NSString*) endTime {

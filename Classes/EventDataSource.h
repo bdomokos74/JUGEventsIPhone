@@ -10,8 +10,9 @@
 #import "EventService.h"
 
 @interface EventDataSource : NSObject <UITableViewDataSource> {
-	EventService *service;
 }
-	
+
+@property (retain) EventService *service;;
 -(id)initWithService:(EventService*)service;
+
 @end
