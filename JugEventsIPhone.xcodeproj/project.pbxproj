@@ -28,6 +28,8 @@
 		29D617E31234537300A3F33D /* EventServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D617E21234537300A3F33D /* EventServiceTest.m */; };
 		29D617EE1234552400A3F33D /* EventHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D617DB1234509300A3F33D /* EventHelper.m */; };
 		29D618101234558700A3F33D /* EventHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6180F1234558700A3F33D /* EventHelperTest.m */; };
+		29D618B91235A66700A3F33D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D618B71235A66700A3F33D /* Default.png */; };
+		29D618BA1235A66700A3F33D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D618B81235A66700A3F33D /* icon.png */; };
 		29D8E1D01231760C00123F5F /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = 29635F1D122D89B700363982 /* example.json */; };
 		29D8E1D11231760C00123F5F /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D0A727122DB84900FA7851 /* EventViewController.xib */; };
 		29D8E1D31231760C00123F5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -97,14 +99,16 @@
 		29D617E21234537300A3F33D /* EventServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventServiceTest.m; path = Tests/EventServiceTest.m; sourceTree = "<group>"; };
 		29D6180E1234558700A3F33D /* EventHelperTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventHelperTest.h; path = Tests/EventHelperTest.h; sourceTree = "<group>"; };
 		29D6180F1234558700A3F33D /* EventHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventHelperTest.m; path = Tests/EventHelperTest.m; sourceTree = "<group>"; };
+		29D618B71235A66700A3F33D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		29D618B81235A66700A3F33D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		29D8E1E51231760C00123F5F /* JugEventsIPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JugEventsIPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D8E1F4123176FA00123F5F /* JugEventsIphoneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JugEventsIphoneTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		29D8E1F5123176FA00123F5F /* JugEventsIphoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JugEventsIphoneTests-Info.plist"; sourceTree = "<group>"; };
+		29D8E1F5123176FA00123F5F /* JugEventsIphoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JugEventsIphoneTests-Info.plist"; path = "../JugEventsIphoneTests-Info.plist"; sourceTree = "<group>"; };
 		29E0C71A122344F0009F535D /* EventDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDataSource.h; sourceTree = "<group>"; };
 		29E0C71B122344F0009F535D /* EventDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDataSource.m; sourceTree = "<group>"; };
 		29E2F15312322F020015BAAA /* EventDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDownloader.h; sourceTree = "<group>"; };
 		29E2F15412322F020015BAAA /* EventDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDownloader.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* JugEventsIPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JugEventsIPhone-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 				29D0A727122DB84900FA7851 /* EventViewController.xib */,
 				29E2F15312322F020015BAAA /* EventDownloader.h */,
 				29E2F15412322F020015BAAA /* EventDownloader.m */,
+				29D8E1F5123176FA00123F5F /* JugEventsIphoneTests-Info.plist */,
 				29D617DA1234509300A3F33D /* EventHelper.h */,
 				29D617DB1234509300A3F33D /* EventHelper.m */,
 			);
@@ -194,13 +199,14 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				29D618B71235A66700A3F33D /* Default.png */,
+				29D618B81235A66700A3F33D /* icon.png */,
 				29D8E206123177C100123F5F /* Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				29D8E1F5123176FA00123F5F /* JugEventsIphoneTests-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -219,7 +225,7 @@
 			children = (
 				2905329A122F0109009B543F /* applicationLogo.jpg */,
 				29635F1D122D89B700363982 /* example.json */,
-				8D1107310486CEB800E47090 /* JugEventsIPhone-Info.plist */,
+				8D1107310486CEB800E47090 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -336,6 +342,8 @@
 				29D0A729122DB84900FA7851 /* EventViewController.xib in Resources */,
 				2905329B122F0109009B543F /* applicationLogo.jpg in Resources */,
 				2905329E122F03A9009B543F /* RootViewController.xib in Resources */,
+				29D618B91235A66700A3F33D /* Default.png in Resources */,
+				29D618BA1235A66700A3F33D /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +452,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = JugEventsIPhone_Prefix.pch;
-				INFOPLIST_FILE = "JugEventsIPhone-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = JugEventsIPhone;
 			};
 			name = Debug;
@@ -456,7 +464,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = JugEventsIPhone_Prefix.pch;
-				INFOPLIST_FILE = "JugEventsIPhone-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = JugEventsIPhone;
 				VALIDATE_PRODUCT = YES;
 			};
